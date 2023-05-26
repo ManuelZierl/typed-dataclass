@@ -13,9 +13,9 @@ setup(
     package_dir={"": "src"},
     classifiers=[
         "Programming Language :: Python :: 3",
-        "License :: OSI Approved :: MIT License",  # Assuming you're using the MIT License
+        "License :: OSI Approved :: MIT License",
         "Operating System :: OS Independent",
     ],
-    python_requires=">=3.6",  # The minimum Python version required
-    install_requires=["typeguard",],  # All of your project's dependencies go here
+    python_requires=">=3.7",
+    install_requires=["typeguard", ],
 )
