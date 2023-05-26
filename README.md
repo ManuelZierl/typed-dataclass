@@ -28,6 +28,24 @@ MyClass(12)   # will succeed
 MyClass ("a") # will fail
 ```
 
+### Pre Validation
+
+You can also implement logic that is happening before Type checks defining `__before_type_check__` function:
+
+```python
+from dataclasses import dataclass
+from typed_dataclass import typed_dataclass
+
+@dataclass
+@typed_dataclass
+class MyClass:
+    my_int: int
+    
+    def __before_type_check__(self):
+        self.my_int = int(self.my_int)
+
+```
+
 ## Testing
 > python -m unittest discover tests
 
